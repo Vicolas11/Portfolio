@@ -125,7 +125,7 @@ img {
     height: 100vh;
     padding: 0 15%;
     background: linear-gradient(180deg,rgba(3, 2, 65, 0.7) 0%, rgba(3, 4, 51, 0.8) 100%),
-                url("img/Header-bg.png") center no-repeat;
+                url("img/Header-bg.jpg") center no-repeat;
     background-size: cover;
     position: relative;   
 }
