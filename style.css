@@ -20,10 +20,13 @@
 
 html {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 80.5%;
+    font-size: 90%;
     color: var(--dark-blue);
     text-transform: uppercase;
     overflow-x: hidden;
+    width: 100%;
+    margin: 0;
+    padding: 0;
 }
 
 html.disableScroll, body.disableScroll {
@@ -41,7 +44,7 @@ a {
 }
 
 img {
-    width: 300px;
+    max-width: 100%;
 }
 
 /* NAVIGATION/HEADER STYLE */
@@ -221,6 +224,7 @@ img {
 #aboutMe-container {
     padding: 0rem 15%;
     position: relative;
+    width: 100%;
     height: auto;
 }
 
@@ -230,6 +234,10 @@ img {
     align-items: center;
     justify-content: center;
     margin-top: 2rem;
+}
+
+#aboutMe-container .box img {
+    width: 80%;
 }
 
 #aboutMe-container div .box {
@@ -249,10 +257,12 @@ img {
 }
 
 .grey-circle {
+    /* display: block; */
     position: absolute;
     top: 1rem;
-    right: -10rem;
-    z-index: 2;
+    right: -11rem;
+    width: 35%;
+    z-index: -1;
     animation: circleScale 4s linear infinite;
 }
 
@@ -307,26 +317,35 @@ img {
 }
 
 #services-container .box-container {
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
-    flex-wrap: wrap;
+    flex-flow: wrap;
     align-items: center;
     justify-content: space-between;
     text-align: center;
     margin-top: 20px;
+    width: 100%;
 }
 
 #services-container .box-container .box {
-    flex: 1 1 10rem;
+    flex: 1 1 15rem;    
     box-shadow: 1px 1px 5px #1b1a1a;
     background: #fcfafa;
     border-radius: 10px 10px;
-    height: 28rem;
-    font-size: 85%;
+    font-size: 80%;
+    width: 100%;
     margin: 5px 15px;
     transform: scale(1);
     transition: all .2s linear;
     cursor: pointer;
 }
+
+#services-container .box-container .box p {
+    height: 160px;
+    overflow-y: hidden;
+}
+
 
 #services-container .box-container .box:hover {
     transform: scale(1.1);
@@ -356,6 +375,7 @@ img {
     background-size: cover;
     padding: 2% 15%;
     margin-bottom: 8px;
+    width: 100%;
     position: relative;
 }
 
@@ -405,6 +425,7 @@ img {
     text-align: center;
     height: 200px;
     display: flex;
+    font-size: 85%;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -438,8 +459,7 @@ img {
 #portfolio-container .box-container .box .boxOverlay .checkBtn a {
     color: var(--dark-blue);
     text-decoration: underline;
-    text-underline-offset: .5rem;
-    
+    text-underline-offset: .5rem;    
 }
 
 #portfolio-container .box-container .box .boxOverlay .checkBtn a:hover {
@@ -467,6 +487,7 @@ img {
 
 /* SATISFACTION STYLE */
 #satisfy-container {
+    width: 100%;
     padding: 5% 15%;
     position: relative;
 }
@@ -575,6 +596,7 @@ img {
     background: linear-gradient(180deg,rgba(3, 2, 65, 0.9) 0%, rgba(3, 4, 51, 1) 100%);
     padding: 1% 15%;
     display: flex;
+    width: 100%;
     flex-wrap: wrap;
     justify-content: space-between;
     position: relative;
@@ -584,6 +606,7 @@ img {
     flex: 1 1 30rem;
     padding: 1rem 1rem;
     margin-top: 2rem;
+    font-size: 80%;
 }
 
 #contactMe-container .yellow-circle {
@@ -670,7 +693,8 @@ img {
 #contactMe-container .inputText input:valid,
 #contactMe-container .inputText textarea:focus,
 #contactMe-container .inputText textarea:valid {
-    border: 2px solid var(--dark-blue);    
+    border: 2px solid var(--dark-blue);  
+    outline: none;  
     color: var(--dark-blue);
     font-weight: bold;
 }
@@ -712,7 +736,7 @@ footer .credit h1 {
     text-transform: capitalize;
     font-family: sans-serif;
     color: #c2c2c2;
-    font-size: 90%;
+    font-size: 70%;
     padding: 1rem 1rem;
     background: rgba(2, 1, 46, 0.9);
     text-align: center;
@@ -735,7 +759,7 @@ footer .credit h1 {
 }
 
 /* <<<<<<<<<<<<<<<<<<< MEDIA QUERY >>>>>>>>>>>>>>>>>>>> */
-@media screen and (max-width:746px) {
+@media screen and (max-width:768px) {
     /* GENERAL STYLE */
     html {
         font-size: 95%;
@@ -991,8 +1015,8 @@ footer .credit h1 {
     }
 
     .mdi-arrow-up-circle {
-        bottom: 2%; right: 1%;
-        font-size: 5rem;
+        bottom: 0; right: 1%;
+        font-size: 450%;
     }
 
     #contactMe-container .floating-label {
